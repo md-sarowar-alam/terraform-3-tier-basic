@@ -4,10 +4,10 @@
 
 terraform {
   backend "s3" {
-    bucket  = "my-terraform-state-bucket"  # Change this to your bucket name
+    bucket  = "batch09-ostad"  # Change this to your bucket name
     key     = "bmi-app/terraform.tfstate"
-    region  = "us-east-1"                  # Change to your region
-    profile = "default"                     # Change to your AWS profile name
+    region  = "ap-south-1"                  # Change to your region
+    profile = "sarowar-ostad"                     # Change to your AWS profile name
     
     # Enable encryption
     encrypt = true

@@ -10,9 +10,8 @@ echo "Starting BMI Health Tracker Deployment"
 echo "Time: $(date)"
 echo "========================================"
 
-# Wait for cloud-init to complete
-echo "Waiting for cloud-init to complete..."
-cloud-init status --wait || true
+# Note: Removed cloud-init wait to avoid deadlock
+# (userdata runs as part of cloud-init final stage)
 
 # Update package lists
 echo "Updating package lists..."
