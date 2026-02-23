@@ -72,7 +72,8 @@ echo "Executing deployment script..."
 cd "$DEPLOY_DIR"
 
 # Run with auto-confirmation (only needs 'y' for the continue prompt)
-echo "y" | sudo -E -u ubuntu bash ./IMPLEMENTATION_AUTO.sh --fresh 2>&1 | tee /var/log/bmi-deployment.log
+# Use -H to set HOME environment variable correctly for the ubuntu user
+echo "y" | sudo -E -H -u ubuntu bash ./IMPLEMENTATION_AUTO.sh --fresh 2>&1 | tee /var/log/bmi-deployment.log
 # Execute the deployment
 # Note: This will run in background and log to /var/log/bmi-deployment.log
 # The actual deployment requires the full application code to be present
