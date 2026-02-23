@@ -470,10 +470,12 @@ These diagrams provide a complete visual understanding of the infrastructure! �
 
 ---
 
+---
+
 ## 🧑‍💻 Author
-**Md. Sarowar Alam**  
+*Md. Sarowar Alam*  
 Lead DevOps Engineer, Hogarth Worldwide  
 📧 Email: sarowar@hotmail.com  
-🔗 LinkedIn: [linkedin.com/in/sarowar](https://www.linkedin.com/in/sarowar/)
+🔗 LinkedIn: https://www.linkedin.com/in/sarowar/
 
 ---

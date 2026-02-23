@@ -408,12 +408,12 @@ For production deployment, consider:
 
 ---
 
-## 🧑‍💻 Author
-**Md. Sarowar Alam**  
-Lead DevOps Engineer, Hogarth Worldwide  
-📧 Email: sarowar@hotmail.com  
-🔗 LinkedIn: [linkedin.com/in/sarowar](https://www.linkedin.com/in/sarowar/)
-
 ---
 
-**Ready to deploy?** Start with the [IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md)! 🚀
+## 🧑‍💻 Author
+*Md. Sarowar Alam*  
+Lead DevOps Engineer, Hogarth Worldwide  
+📧 Email: sarowar@hotmail.com  
+🔗 LinkedIn: https://www.linkedin.com/in/sarowar/
+
+---
