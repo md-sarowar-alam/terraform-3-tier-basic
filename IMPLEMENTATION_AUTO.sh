@@ -29,12 +29,13 @@ BACKUP_DIR="$HOME/bmi_deployments_backup"
 FRONTEND_DIR="/var/www/bmi-health-tracker"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 
-# Database Configuration (will be set by user input)
-DB_NAME="bmidb"
-DB_USER="bmi_user"
-DB_PASSWORD=""
-DB_HOST="localhost"
-DB_PORT="5432"
+# Database Configuration (will be set by user input or environment variables)
+# Use conditional assignment: only set if not already set from environment
+DB_NAME="${DB_NAME:-bmidb}"
+DB_USER="${DB_USER:-bmi_user}"
+DB_PASSWORD="${DB_PASSWORD:-}"
+DB_HOST="${DB_HOST:-localhost}"
+DB_PORT="${DB_PORT:-5432}"
 
 # Parse command line arguments
 SKIP_NGINX=false
