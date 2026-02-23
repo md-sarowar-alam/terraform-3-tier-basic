@@ -59,15 +59,20 @@ echo "Starting automated deployment..."
 echo "========================================"
 
 # Export database credentials as environment variables
+# These will be picked up by IMPLEMENTATION_AUTO.sh for non-interactive mode
 export DB_NAME="${db_name}"
 export DB_USER="${db_user}"
 export DB_PASSWORD="${db_password}"
+export DB_HOST="localhost"
+export DB_PORT="5432"
 
-# Run as ubuntu user with auto-yes
-# Run deployment with automatic answers
+# Run deployment as ubuntu user
+# The script will use environment variables instead of prompting
 echo "Executing deployment script..."
 cd "$DEPLOY_DIR"
-echo -e "y\n${db_name}\n${db_user}\n${db_password}\n${db_password}\n" | sudo -u ubuntu ./IMPLEMENTATION_AUTO.sh --fresh 2>&1 | tee /var/log/bmi-deployment.log
+
+# Run with auto-confirmation (only needs 'y' for the continue prompt)
+echo "y" | sudo -E -u ubuntu bash ./IMPLEMENTATION_AUTO.sh --fresh 2>&1 | tee /var/log/bmi-deployment.log
 # Execute the deployment
 # Note: This will run in background and log to /var/log/bmi-deployment.log
 # The actual deployment requires the full application code to be present

@@ -128,6 +128,20 @@ get_ec2_public_ip() {
 collect_database_credentials() {
     print_header "Database Configuration"
     
+    # Check if credentials are already set via environment variables (non-interactive mode)
+    if [ -n "$DB_NAME" ] && [ -n "$DB_USER" ] && [ -n "$DB_PASSWORD" ]; then
+        print_info "Using database credentials from environment variables"
+        print_success "Database credentials loaded"
+        echo ""
+        echo "Database Name: $DB_NAME"
+        echo "Database User: $DB_USER"
+        echo "Database Host: $DB_HOST"
+        echo "Database Port: $DB_PORT"
+        echo ""
+        return 0
+    fi
+    
+    # Interactive mode
     echo "Please provide database credentials for the BMI Health Tracker"
     echo ""
     
